@@ -1,0 +1,24 @@
+@mixin display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin displayWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin list-style {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin categor_title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $primary-black;
+}

@@ -1,0 +1,197 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    margin-bottom: 12px;
+    padding-top: 25px;
+  }
+  &__logo-box {
+    width: 150px;
+    height: 34px;
+  }
+  &__nav-box {
+    display: flex;
+    align-items: center;
+    button {
+      display: none;
+    }
+  }
+  .nav {
+    &__list {
+      @include display;
+      @include list-style;
+      margin-right: -25px;
+      margin-left: -25px;
+    }
+    &__item {
+      margin: 0 25px;
+    }
+    &__link {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $primary-black;
+      text-decoration: none;
+      display: inline-block;
+      padding-bottom: 25px;
+      transition: all 0.2s ease;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        -webkit-text-stroke: 0.7px $primary-black;
+        border-bottom: 3px solid $primary-green;
+      }
+    }
+    &__link-act {
+      font-weight: 700;
+      border-bottom: 3px solid $primary-green;
+    }
+  }
+  &__btns-box {
+    width: auto;
+    height: 35px;
+    display: flex;
+    align-items: center;
+  }
+  &__search-btn,
+  &__shop-btn {
+    position: relative;
+    margin-right: 25px;
+    border: none;
+    font-size: 25px;
+    line-height: 26px;
+    color: $primary-black;
+    background: transparent;
+  }
+  &__shop-btn {
+    span {
+      position: absolute;
+      top: 0;
+      right: -7px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 14px;
+      padding: 1px 3.5px;
+      border-radius: 50%;
+      display: inline-block;
+      background: $primary-green;
+      color: $white;
+    }
+  }
+  &__login-btn {
+    position: relative;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    background: $primary-green;
+    border-radius: $border-radius-2;
+    transition: all 0.2s ease;
+    padding: 8px 18px 9px 41px;
+    border: none;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      font-size: 20px;
+      margin-right: 4px;
+      display: inline-block;
+      transform: translate(-20%, -50%);
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__menu-btn {
+    border: none;
+    font-size: 32px;
+    line-height: 34px;
+    color: $primary-black;
+    transition: all 0.2s ease;
+    background: transparent;
+    display: none;
+    &:hover {
+      color: $primary-green;
+    }
+  }
+}
+
+// MEDIA PART
+
+@media screen and (max-width: 810px) {
+  .header__nav-box {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    height: 0vh;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    transition: all 0.5s ease;
+    border-radius: 0 0 $border-radius-2 $border-radius-2;
+    box-shadow: 1px 3px 10px 1px rgba(148, 148, 148, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+
+    .nav {
+      width: 100%;
+      margin-bottom: 20px !important;
+      padding-top: 30px;
+      padding-left: 30px;
+      ul {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 !important;
+        li {
+          width: 100%;
+          margin: 0 !important;
+          margin-bottom: 15px !important;
+          a {
+            text-align: left;
+            padding-bottom: 10px !important;
+          }
+        }
+      }
+    }
+    .header__menu-btns {
+      width: 100%;
+      text-align: left;
+      padding-left: 30px;
+      div {
+        display: flex;
+        align-items: center;
+      }
+      button {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .header__search-btn,
+  .header__shop-btn {
+    display: none;
+  }
+  .header__menu-btn {
+    display: block;
+    margin-left: 20px;
+    color: $primary-green;
+    transition: all 0.3s ease;
+  }
+}
+@media screen and (max-width: 460px) {
+  .header__login-btn {
+    display: none;
+  }
+}
+.menuBox {
+  height: 50vh;
+  z-index: 1000;
+}

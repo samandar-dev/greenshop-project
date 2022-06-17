@@ -5,15 +5,28 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  overflow-x: hidden;
+  background-color: #fff;
+  // overflow-x: hidden;
+  font-family: "Cera Pro" !important;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
 }

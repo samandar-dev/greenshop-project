@@ -1,0 +1,126 @@
+.plants {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 140px;
+
+  &__inner {
+    width: 100%;
+    flex-wrap: wrap;
+    @include display;
+  }
+  &__left,
+  &__right {
+    position: relative;
+    width: 100%;
+    max-width: 585px;
+    height: 250px;
+    @include display;
+    background: $primary-dark-white;
+  }
+  &__left-img-box,
+  &__right-img-box {
+    width: 295px;
+    height: 295px;
+    margin-top: -60px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+  &__left-desc,
+  &__right-desc {
+    width: auto;
+    height: 100%;
+    text-align: right;
+    padding-top: 37px;
+    padding-right: 30px;
+    h3 {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 24px;
+      text-align: right;
+      margin-bottom: 9px;
+      padding-left: 125px;
+      color: $primary-black;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: right;
+      color: $text-color;
+      margin-bottom: 25px;
+    }
+    button {
+      position: relative;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      transition: all 0.2s ease;
+      background: $primary-green;
+      padding: 11px 47px 9px 28px;
+      border-radius: $border-radius-2;
+      i {
+        position: absolute;
+        top: 53%;
+        left: 95px;
+        font-size: 20px;
+        margin-left: 2px;
+        line-height: 20px;
+        transition: all 0.2s ease;
+        transform: translate(0, -50%);
+      }
+
+      &:hover {
+        opacity: 0.8;
+
+        i {
+          left: 105px;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA PART ---------------
+
+@media screen and (max-width: 1220px) {
+  .plants__left,
+  .plants__right {
+    width: 100% !important;
+    max-width: 1200px !important;
+  }
+  .plants__left {
+    margin-bottom: 100px !important;
+  }
+}
+@media screen and (max-width: 630px) {
+  .plants__left,
+  .plants__right {
+    height: auto !important;
+  }
+  .plants__left {
+    margin-bottom: 40px !important;
+  }
+  .plants__left-desc,
+  .plants__right-desc {
+    width: 100% !important;
+    padding: 35px 20px;
+    h3 {
+      padding: 0 !important;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    text-align: center;
+  }
+  .plants__left-img-box,
+  .plants__right-img-box {
+    display: none;
+  }
+}
